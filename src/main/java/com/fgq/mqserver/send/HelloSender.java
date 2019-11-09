@@ -16,7 +16,7 @@ public class HelloSender {
     @Autowired
     private AmqpTemplate template;
 
-    public void send() {
-        template.convertAndSend("test-queue", "hello,rabbit~send message");
+    public void send(int i) {
+        template.convertAndSend("test-queue", "hello,rabbit~send message,序号:"+i);
     }
 }

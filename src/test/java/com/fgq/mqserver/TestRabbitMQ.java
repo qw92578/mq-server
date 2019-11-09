@@ -23,6 +23,11 @@ public class TestRabbitMQ {
 
     @Test
     public void testRabbit() {
-        helloSender.send();
+        int i=0;
+        while (i<15) {
+
+            helloSender.send(i);
+            i++;
+        }
     }
 }
